@@ -1,5 +1,12 @@
-
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
+from fastapi.responses import JSONResponse
+from PIL import Image, ImageEnhance
+import numpy as np
+import cv2
+import io
+import uuid
+import boto3
+from rembg import remove
 
 app = FastAPI()
 
