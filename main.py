@@ -67,6 +67,9 @@ def upload_to_r2(image: Image.Image, filename: str) -> str:
     return f"https://pub-edd8f524b4784df1b5961ce0d431f767.r2.dev/{r2_key}"
 
 # === FASTAPI ROUTE ===
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
 
 @app.post("/process")
 async def process_image(file: UploadFile = File(...)):
