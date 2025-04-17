@@ -1,1 +1,8 @@
 fastapi[all]
+uvicorn
+rembg
+boto3
+pillow
+numpy
+opencv-python-headless
+onnxruntime
