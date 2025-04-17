@@ -1,7 +1,7 @@
 from typing import Optional
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
-
+from PIL import Image, ImageEnhance
 app = FastAPI()
 
 def process_gemstone_image(file: UploadFile) -> Image.Image:
