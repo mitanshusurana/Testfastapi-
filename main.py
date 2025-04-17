@@ -1,6 +1,11 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
-
+from PIL import Image, ImageEnhance
+import numpy as np
+import cv2
+import uuid
+import boto3
+from rembg import remove
 
 app = FastAPI()
 
@@ -11,6 +16,6 @@ async def root():
 @app.post("/process")
 async def process_image(file: UploadFile = File(...)):
     try:
-        return JSONResponse(content={"imageUrl"})
+        return JSONResponse(content={"imageUrl":"hello"})
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
