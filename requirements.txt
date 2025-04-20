@@ -1,8 +1,11 @@
-fastapi[all]
-uvicorn
+fastapi[all]==0.109.0
+uvicorn[standard]==0.27.0
+gunicorn==21.2.0
 rembg
 boto3
 pillow
 numpy
 opencv-python-headless
 onnxruntime
+
+
